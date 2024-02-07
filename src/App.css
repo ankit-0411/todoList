@@ -1,38 +1,121 @@
 .App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.headLine {
+  color: #7f8c8d !important;
+  font-size: large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputType {
+  width: calc(100% - 130px); /* Adjusted width */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #7f8c8d;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputType:focus {
+  outline: none;
+  border-color: #27ae60;
+}
+
+.input-button-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-expense-button {
+  border: none;
+  background-color: #f39c12; /* Different color for Add button */
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding: 12px 20px;
+  margin: 0px 15px 17px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-expense-button:hover {
+  background-color: #e67e22;
+}
+
+.save-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #27ae60; /* Different color for Save button */
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #2ecc71;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between; /* Adjusted alignment */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+li span {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-delete-buttons button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #3498db; /* Different color for Edit button */
+  color: #fff;
+  margin: 5px;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Different color for Delete button */
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.empty-list-message {
+  color: #7f8c8d;
+  font-style: italic;
 }
