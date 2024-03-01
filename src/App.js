@@ -10,11 +10,12 @@ import FormValidation from "./FormValidation";
 import Paginations from "./Paginations";
 import StartCounter from "./StartCounter";
 import PracPagination from "./PracPagination";
+import StopWatch from "./StopWatch";
 
 const App = () => {
   return (
     <>
-      <TodoApp />
+      {/* <TodoApp /> */}
       {/* <SelectCheck /> */}
       {/* <ImageSlider /> */}
       {/* <StarRating /> */}
@@ -24,8 +25,9 @@ const App = () => {
       {/* <BasicFormWithValidator /> */}
       {/* <FormValidation /> */}
       {/* <Paginations /> */}
-      {/* <StartCounter /> */}
+      <StartCounter />
       {/* <PracPagination />  */}
+      {/* <StopWatch /> */}
     </>
   );
 };
