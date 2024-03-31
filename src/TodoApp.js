@@ -8,15 +8,17 @@ const TodoApp = () => {
   const [editExpenseId, setEditExpenseId] = useState(null);
 
   const addExpenseHandler = () => {
-    const newExpenseItem = {
-      id: (allExpenses.length + 1).toString(),
-      name: newExpense,
-    };
+    if (newExpense?.length > 0) {
+      const newExpenseItem = {
+        id: (allExpenses.length + 1).toString(),
+        name: newExpense,
+      };
 
-    const totalTask = [...allExpenses, newExpenseItem];
+      const totalTask = [...allExpenses, newExpenseItem];
 
-    setAllExpenses(totalTask);
-    setNewExpense("");
+      setAllExpenses(totalTask);
+      setNewExpense("");
+    }
   };
 
   const deleteHandler = (id) => {
